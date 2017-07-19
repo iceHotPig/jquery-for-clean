@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery.js"></script>
+	<style>
+		#box{
+			height: 100px;
+			width: 100px;
+			background: red;
+		}
+		.box1{
+			height: 50px;
+			width: 50px;
+			background: blue;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<div class="box1">
+			
+		</div>
+	</div>
+  <ul id="list">
+  	<li>1</li>
+  	<li class="one">2</li>
+  	<li class="two">3</li>
+  	<li >4</li>
+  	<li class="a">5</li>
+  	<li class="b">6</li>
+  </ul>
+  <div>
+	  <div>
+		  <span>11</span>
+		  <span>33</span>
+		  <span>22</span>
+	  </div>
+  </div>
+</body>
+</html> 
+<script>
+	$(document).ready(function(){
+		// $('#box').click(function(){
+		// 	$(this).get(0).style.background='blue';
+		// })
+		// $('#list li').eq(1).css('background','blue');
+		// $('#list li').get(1).style.background='red';
+		// $('#list li').eq(-1).css('background','blue');
+		// alert($('li').size());
+		// alert($('li').length);
+		// (alert($('#box').width());
+				// alert($('#box').css('width'));
+				// alert($('#box').outerWidth());
+				// alert($('#box').innerWidth());)
+
+		// alert($('p').text('<h1>hello</h1>'));
+		// alert($('p').html('<h1>hello</h1>'));
+		// $('#box').css('display','none');
+
+		// var box=$('#box').remove();
+		// $('body').append(box);
+
+		// var box=$('#box').detach();
+		// $('body').append(box);
+
+		//选择父级元素；
+		// $('.box1').parent().css('background','green');
+	  //选择父级及以上元素；
+
+		// $('.box1').parents('#box').css('background','green');
+	  //选择靠近自己的父级元素，必须传参；
+
+		// $('.box1').closest('#box').css('background','red');
+		//选择同级的兄弟节点。传参表示筛选；
+		// $('.one').siblings('.two') .css('background','red');
+
+		//next() 不能传參；
+		// $('.two').nextAll('.a').css('background','yellow');
+
+    //可以不传參表示到最后，传參则表示在传參的之前；
+		// $('.one').nextUntil('.b').css('background','blue');
+
+		// $('.one').nextUntil().css('background','green');
+		// $('ul li').css('background','green').filter('.a').css('background','red');
+		// $('ul li').css('background','green').not('.a').css('background','red');
+
+		//单独装箱，每个节点都会打包
+		// $('span').wrap('<div>');
+		$('span').wrap('<div>');
+
+	  //可以多个相同的标签装箱；选中所有节点，集体打包 ；若果其中出现不一致的标签，其他标签会被剔除来；
+	  // $('span').wrapAll('<div>');
+
+		$('span').unwrap();
+		//body  是不肯能拆的，只能拆其父元素；
+		// $('span').unwrap('<body>');
+	})
+</script>
+
+<!-- 子级节点获取-->
+<!-- 相向选择怎么选 pre -->
+
